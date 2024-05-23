@@ -1,6 +1,14 @@
 # Diong, Shan Marc C.
 # BSCPE 1-2
 
+# Word Format and Text to Speech
+import pyttsx3
+
+text_to_speech = pyttsx3.init()
+text_to_speech.setProperty('rate', 150)
+green = "\033[0;32m"
+blue = "\033[0;34m"
+
 # Import TV
 from TV import TV
 
