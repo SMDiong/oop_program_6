@@ -17,6 +17,13 @@ def test_tv():
     tv_1.set_channel(30)
 
     # Creating the second TV object
+    tv_2 = TV()
+    # Turn on TV 2
+    tv_2.turn_on()
+    # Set volume of TV 2 to 3
+    tv_2.set_volume(2)
+    # Set channel of TV 2 to 30
+    tv_2.set_channel(3)
 
     # Output results of both TV objects
 
