@@ -10,9 +10,14 @@ class TV:
         self.on = False
 
     # Creating method for turn on and off
+    def turn_on(self):
+        self.on = True
+
+    def turn_off(self):
+        self.on = False
 
     # Creating method for getting the channel
-
+    
     # Creating method for setting the channel ranging from 1 to 120
 
     # Creating method for getting the volume
