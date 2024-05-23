@@ -1,6 +1,9 @@
 # Diong, Shan Marc C.
 # BSCPE 1-2
 
+# Import TV
+from TV import TV
+
 # Word Format and Text to Speech
 import pyttsx3
 
@@ -8,9 +11,6 @@ text_to_speech = pyttsx3.init()
 text_to_speech.setProperty('rate', 150)
 green = "\033[0;32m"
 blue = "\033[0;34m"
-
-# Import TV
-from TV import TV
 
 
 # Create the test driver program that will create two objects from Class TV
@@ -33,7 +33,18 @@ def test_tv():
     # Set channel of TV 2 to 30
     tv_2.set_channel(3)
 
-    # Output results of both TV objects
+    # Output results of TV 1
+    output_speech = "TV 1's channel is 30 and volume level is 3"
+    print(green + f"\ntv1's channel is {blue}{tv_1.get_channel()}{green} and volume level is {blue}{tv_1.get_volume()}")
+    text_to_speech.say(output_speech)
+    text_to_speech.runAndWait()
+
+    # Output results of TV 2
+    output_speech = "TV 2's channel is 3 and volume level is 2"
+    print(green + f"\ntv2's channel is {blue}{tv_2.get_channel()}{green} and volume level is {blue}{tv_2.get_volume()}")
+    text_to_speech.say(output_speech)
+    text_to_speech.runAndWait()
 
 
 test_tv()
+# End
